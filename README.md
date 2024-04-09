@@ -22,23 +22,22 @@ This project focuses on analyzing news data to uncover insights such as top news
 
 The project is structured as follows:
 
-├── .vscode
-│ └── settings.json
-├── .github
-│ └── workflows
-│ ├── flake8_check.yml
-│ ├── unittests.yml
-│ └── docstring_tests.yml
-├── .gitignore
-├── .flake8
-├── requirements.txt
-├── README.md
-├── docs
-├── notebooks
-│ └── news_correlation.ipynb
-└── tests
-└── init.py
-
+- .vscode
+  - settings.json
+- .github
+  - workflows
+    - flake8_check.yml
+    - unittests.yml
+    - docstring_tests.yml
+- .gitignore
+- .flake8
+- requirements.txt
+- README.md
+- docs
+- notebooks
+  - news_correlation.ipynb
+- tests
+  - __init__.py
 ## Task Overview
 
 The project is divided into multiple tasks:
