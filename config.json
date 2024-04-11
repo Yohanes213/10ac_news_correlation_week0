@@ -1,0 +1,9 @@
+{
+    "num_topics" : 20,
+    "NUM_WORDS" : 10000,
+    "EMBEDDING_DIM" : 64,
+    "MAXLEN" : 3000,
+    "PADDING" :"post",
+    "OOV_TOKEN" : "",
+    "EPOCHS": 15
+  }
