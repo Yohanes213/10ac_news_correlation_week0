@@ -1,9 +1,13 @@
+import numpy as np
 import matplotlib.pyplot as plt
 
 import re
 import nltk
 from nltk.corpus import stopwords
 from nltk.stem.wordnet import WordNetLemmatizer
+from tensorflow.keras.preprocessing.text import Tokenizer
+from tensorflow.keras.preprocessing.sequence import pad_sequences
+
 nltk.download('stopwords')
 nltk.download('wordnet')
 nltk.download('omw-1.4')
@@ -129,3 +133,77 @@ def preprocess_text(text):
 
 
     return normalized_text
+
+
+def fit_tokenizer(train_sentences, num_words, oov_token):
+    """
+    Instantiates the Tokenizer class on the training sentences
+
+    Args:
+        train_sentences (list of string): lower-cased sentences without stopwords to be used for training
+        num_words (int) - number of words to keep when tokenizing
+        oov_token (string) - symbol for the out-of-vocabulary token
+
+    Returns:
+        tokenizer (object): an instance of the Tokenizer class containing the word-index dictionary
+    """
+
+    # Instantiate the Tokenizer class, passing in the correct values for num_words and oov_token
+    tokenizer = Tokenizer(num_words = num_words , oov_token = oov_token)
+
+    # Fit the tokenizer to the training sentences
+    tokenizer.fit_on_texts(train_sentences)
+
+    return tokenizer
+     
+
+def seq_and_pad(sentences, tokenizer, padding, maxlen):
+    """
+    Generates an array of token sequences and pads them to the same length
+
+    Args:
+        sentences (list of string): list of sentences to tokenize and pad
+        tokenizer (object): Tokenizer instance containing the word-index dictionary
+        padding (string): type of padding to use
+        maxlen (int): maximum length of the token sequence
+
+    Returns:
+        padded_sequences (array of int): tokenized sentences padded to the same length
+    """
+
+    # Convert sentences to sequences
+    sequences = tokenizer.texts_to_sequences(sentences)
+
+    # Pad the sequences using the correct padding and maxlen
+    padded_sequences = pad_sequences(sequences , maxlen = maxlen , padding = padding)
+
+    return padded_sequences
+
+
+def tokenize_labels(all_labels, split_labels):
+    """
+    Tokenizes the labels
+
+    Args:
+        all_labels (list of string): labels to generate the word-index from
+        split_labels (list of string): labels to tokenize
+
+    Returns:
+        label_seq_np (array of int): tokenized labels
+    """
+
+    # Instantiate the Tokenizer (no additional arguments needed)
+    label_tokenizer = Tokenizer()
+
+    # Fit the tokenizer on all the labels
+    label_tokenizer.fit_on_texts(all_labels)
+
+    # Convert labels to sequences
+    label_seq = label_tokenizer.texts_to_sequences(split_labels)
+
+    # Convert sequences to a numpy array. Don't forget to substact 1 from every entry in the array!
+    label_seq_np = np.array(label_seq)
+    label_seq_np = np.subtract(label_seq_np , 1)
+
+
+    return label_seq_np
