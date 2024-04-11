@@ -1,2 +1,4 @@
 data/**
 myenv/
+
+src/__pycache__/
