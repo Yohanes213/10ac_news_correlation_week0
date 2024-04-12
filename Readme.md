@@ -60,6 +60,7 @@ The project is structured as follows:
   - saved_model_weights.h5
 - notebooks
   - news_correlation.ipynb
+- screenshoots: screenshots of the streamlit dashboard.
 - src
   - csv_handler.py
   - database.py
