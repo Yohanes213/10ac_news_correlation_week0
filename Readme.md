@@ -34,11 +34,13 @@ Git installed on your system. You can download and install Git from https://git-
 
 3. Clone the repository using the following command:
 
-``` Bash
-git clone https://github.com/Yohanes213/10ac_news_correlation_week0.git
-cd 10ac_news_correlation_week0
-```
+   ``` bash
+   git clone https://github.com/Yohanes213/10ac_news_correlation_week0.git
+   
+   cd 10ac_news_correlation_week0
+   ```
 4. Install the required dependencies:
+   
    ```bash
     pip install -r requirements.txt
     ```
