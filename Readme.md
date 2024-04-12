@@ -18,14 +18,15 @@ This repository contains the code and documentation for the News Correlation Ana
 
 This project focuses on analyzing news data to uncover insights such as top news websites, traffic analysis, sentiment analysis, topic modeling, and more. The dataset includes information about news articles, including source, author, content, sentiment, and publication date. By leveraging various data science techniques, we aim to gain actionable insights into the news landscape.
 
-How to Clone the Repository
+## How to Clone the Repository
+
 This section will guide you through cloning the repository and setting up your development environment.
 
-Prerequisites
+### Prerequisites
 
 Git installed on your system. You can download and install Git from https://git-scm.com/downloads
 
-Steps
+### Steps
 
 1. Open a terminal window.
 
