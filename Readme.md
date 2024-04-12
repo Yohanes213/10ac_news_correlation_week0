@@ -10,7 +10,6 @@ This repository contains the code and documentation for the News Correlation Ana
 - [Task 2: Data Science Component Building](#task-2-data-science-component-building)
 - [Task 3: PostgreSQL](#task-3-postgresql)
 - [Task 4: Dashboards](#task-4-dashboards)
-- [Task 5: Deployment](#task-5-deployment)
 - [Contributing](#contributing)
 - [License](#license)
 
@@ -22,22 +21,32 @@ This project focuses on analyzing news data to uncover insights such as top news
 
 The project is structured as follows:
 
-- .vscode
-  - settings.json
 - .github
   - workflows
     - flake8_check.yml
     - unittests.yml
     - docstring_tests.yml
-- .gitignore
-- .flake8
-- requirements.txt
-- README.md
-- docs
+- .vscode
+  - settings.json
+- model
+  - saved_model_weights.h5
 - notebooks
   - news_correlation.ipynb
+- src
+  - csv_handler.py
+  - database.py
+  - loader.py
+  - main.py
+  - utils.py
 - tests
   - __init__.py
+- .gitignore
+- README.md
+- app.py
+- confif.json
+- requirements.txt
+  
+
 ## Task Overview
 
 The project is divided into multiple tasks:
@@ -53,6 +62,23 @@ The project is divided into multiple tasks:
 - **Git and GitHub Setup**: Created a GitHub repository and set up version control.
 - **Python Environment Setup**: Prepared a Python environment for data analysis.
 - **Exploratory Data Analysis (EDA)**: Analyzed the dataset to answer various questions about news articles, including top websites, traffic analysis, sentiment analysis, and more.
+
+## Task 2: Data Science Component Building
+
+- **Topic Modeling**: Implemented topic modeling on news articles to uncover underlying themes.
+- **Sentiment Analysis**: Conducted sentiment analysis on news article titles to understand public perception.
+- *Add more details if needed*
+
+## Task 3: PostgreSQL
+
+- **Database Schema Design**: Designed a schema for PostgreSQL to store ML features.
+- **Data Loading**: Loaded data from CSV into PostgreSQL database for efficient storage and retrieval.
+- *Add more details if needed*
+
+## Task 4: Dashboards
+
+- **Streamlit Dashboard**: Designed and implemented a Streamlit dashboard to visualize EDA and model prediction results.
+- *Add more details if needed*
 
 ## Contributing
 
