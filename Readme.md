@@ -4,6 +4,7 @@ This repository contains the code and documentation for the News Correlation Ana
 ## Table of Contents
 
 - [Introduction](#introduction)
+- [How to Clone the Repository](#how-to-clone-the-repository)
 - [Project Structure](#project-structure)
 - [Task Overview](#task-overview)
 - [Task 1: Project Setup and EDA](#task-1-project-setup-and-eda)
@@ -16,6 +17,30 @@ This repository contains the code and documentation for the News Correlation Ana
 ## Introduction
 
 This project focuses on analyzing news data to uncover insights such as top news websites, traffic analysis, sentiment analysis, topic modeling, and more. The dataset includes information about news articles, including source, author, content, sentiment, and publication date. By leveraging various data science techniques, we aim to gain actionable insights into the news landscape.
+
+How to Clone the Repository
+This section will guide you through cloning the repository and setting up your development environment.
+
+Prerequisites
+
+Git installed on your system. You can download and install Git from https://git-scm.com/downloads
+
+Steps
+
+1. Open a terminal window.
+
+2. Navigate to the desired directory on your local machine where you want to clone the repository. You can use the cd command to change directories.:
+
+3. Clone the repository using the following command:
+
+``` Bash
+git clone https://github.com/Yohanes213/10ac_news_correlation_week0.git
+cd 10ac_news_correlation_week0
+```
+4. Install the required dependencies:
+   ```bash
+    pip install -r requirements.txt
+    ```
 
 ## Project Structure
 
