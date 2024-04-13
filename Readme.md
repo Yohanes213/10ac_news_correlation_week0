@@ -96,18 +96,15 @@ The project is divided into multiple tasks:
 
 - **Topic Modeling**: Implemented topic modeling on news articles to uncover underlying themes.
 - **Sentiment Analysis**: Conducted sentiment analysis on news article titles to understand public perception.
-- *Add more details if needed*
 
 ## Task 3: PostgreSQL
 
 - **Database Schema Design**: Designed a schema for PostgreSQL to store ML features.
 - **Data Loading**: Loaded data from CSV into PostgreSQL database for efficient storage and retrieval.
-- *Add more details if needed*
 
 ## Task 4: Dashboards
 
 - **Streamlit Dashboard**: Designed and implemented a Streamlit dashboard to visualize EDA and model prediction results.
-- *Add more details if needed*
 
 ## Contributing
 
